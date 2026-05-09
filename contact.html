@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+       <header class="header">
+        <div class="header-container">
+            <div class="logo">AS</div>
+            <nav class="navigation">
+                <a href="index.html" class="anchor">Home</a>
+                <a href="about.html" class="anchor">About</a>
+                <a href="projects.html" class="anchor">Projects</a>
+                <a href="contact.html" class="anchor">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <h1 class="contact-title">Contact Me</h1>
+    <div class="contact-container">
+        <form class="contact-form" action="https://formsubmit.co/sinjaanup@gmail.com" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required placeholder="Jon Doe">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="jon.doe@example.com">
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+
+            <button type="submit" class="button">Send Message</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2026 Anup Sapkota. All rights reserved.</p>
+    </footer>
+</body>
+</html>
