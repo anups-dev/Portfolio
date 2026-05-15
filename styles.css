@@ -279,3 +279,106 @@ input, textarea {
 .button:hover {
     background: #5a4b43;
 }
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.about-intro {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    text-align: justify;
+    background: rgba(139, 139, 122, 0.04);
+    padding: 2.5rem;
+    border-left: 4px solid #636262;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.066);
+    transition: var(--transition);
+}
+.about-intro:hover {
+    background: rgba(139, 139, 122, 0.06);
+    transform: translateX(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.about-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1.5rem;
+
+}
+img.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 4px solid var(--accent-gold);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.projects-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    margin: 2rem 0;
+    text-align: center;
+    color: var(--accent-gold);
+    letter-spacing: 2px;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+.projects-title
+::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+}
+.project-card {
+    background: rgba(139, 139, 122, 0.04);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.066);
+    transition: var(--transition);
+}
+.project-card:hover {
+    background: rgba(139, 139, 122, 0.06);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+.project-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-gold);
+}
+.project-link {
+    margin-top: 1rem;
+    align-items: center;
+    a {
+        background: var(--accent-gold);
+        color: #fff;
+        border: none;
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: var(--transition);
+        align-items: center;
+
+    }
+}
