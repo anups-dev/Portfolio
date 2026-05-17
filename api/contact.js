@@ -1,6 +1,5 @@
 import { Resend } from "resend";
-
-const resend = new Resend("re_S8qJC5gu_JSEwc7x8vbbvjWSsqVzKfeDm");
+const resend = new Resend(process.env.RESEND_API_KEY);
 export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).end();
 
@@ -23,9 +22,4 @@ export default async function handler(req, res) {
     res.status(500).json({ error });
   }
 }
-const btn = document.getElementById("contact-btn");
-btn.addEventListener("click", async (e) => {
-  e.preventDefault();
-  document.getElementById("contact-form").style.display = "none";
-  document.getElementById("success-message").style.display = "block";
-});
+
