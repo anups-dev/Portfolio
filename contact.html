@@ -21,7 +21,7 @@
     </header>
     <h1 class="contact-title">Contact Me</h1>
     <div class="contact-container">
-        <form class="contact-form" action="/api/contact" method="POST">
+        <form class="contact-form" action="/api/contact" method="POST" id="contact-form">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required placeholder="Jon Doe">
 
@@ -31,8 +31,11 @@
             <label for="message">Message:</label>
             <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
 
-            <button type="submit" class="button">Send Message</button>
+            <button type="submit" class="button" id="contact-btn">Send Message</button>
         </form>
+        <div class="success-message" id="success-message" style="display: none;">
+            <p>Thank you for your message! I'll get back to you soon.</p>
+        </div>
     </div>
     <footer class="footer">
         <p>&copy; 2026 Anup Sapkota. All rights reserved.</p>
