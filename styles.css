@@ -395,6 +395,7 @@ img.profile-image {
     text-decoration: none;
     font-size: 0.9rem;
     transition: var(--transition);
+
 }
 .linkedin-link:hover, .github-link:hover, .email-link:hover {
     color: var(--accent-gold);
