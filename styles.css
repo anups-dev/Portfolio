@@ -391,13 +391,19 @@ img.profile-image {
     margin-bottom: 2rem;
 }
 .github-link, .linkedin-link, .email-link {
-    margin-left: 1rem;
+    margin-left: 1.2rem;
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1rem;
     transition: var(--transition);
 
 }
 .linkedin-link:hover, .github-link:hover, .email-link:hover {
     color: var(--accent-gold);
+}
+.fab {
+    font-size: 1.5rem;
+}
+.fas {
+    font-size: 1.5rem;
 }
