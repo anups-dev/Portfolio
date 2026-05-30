@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Interest Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monthly Interest Calculator</h1>
+        <p class="subtitle">Calculate your monthly interest predictions</p>
+        
+        <form id="interestForm">
+            <div class="input-group">
+                <label for="lastPrincipal">Last Principal (End of Previous Month)</label>
+                <div class="field-icon-wrapper">
+                    <input 
+                        type="number" 
+                        id="lastPrincipal" 
+                        class="has-currency"
+                        placeholder="Enter principal amount" 
+                        step="0.1" 
+                        value="10000"
+                        required
+                    >
+                    <span class="currency">$</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="totalDaysInMonth">Total Days in This Month</label>
+                <div class="field-icon-wrapper">
+                    <input 
+                        type="number" 
+                        id="totalDaysInMonth" 
+                        class="has-unit"
+                        placeholder="Enter total days (28-31)" 
+                        min="28" 
+                        max="31" 
+                        value="30"
+                        required
+                    >
+                    <span class="unit">days</span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Added Principals</label>
+                <div class="additions-section">
+                    <div id="additionsList" class="additions-list">
+                        <!-- Entries will be added here -->
+                    </div>
+                    <button type="button" class="add-entry-btn" onclick="addNewEntry()">+ Add Principal Entry</button>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label for="interestRate">Annual Interest Rate</label>
+                <div class="field-icon-wrapper">
+                    <input 
+                        type="number" 
+                        id="interestRate" 
+                        class="has-unit"
+                        placeholder="Enter interest rate" 
+                        step="0.01" 
+                        value="6"
+                        required
+                    >
+                    <span class="unit">%</span>
+                </div>
+            </div>
+
+            <button type="button" class="calculate-btn" onclick="calculateInterest()">Calculate Interest</button>
+        </form>
+
+        <div id="results" class="results hidden">
+            <div class="result-card">
+                <div class="result-item">
+                    <span class="result-label">Interest on Last Principal</span>
+                    <span class="result-value" id="interestOnLast">$0.00</span>
+                </div>
+            </div>
+
+            <div id="additionsResultsList" class="additions-results">
+                <!-- Interest for each addition will be shown here -->
+            </div>
+
+            <div class="result-card highlight">
+                <div class="result-item">
+                    <span class="result-label total">Total Interest This Month</span>
+                    <span class="result-value total" id="totalInterest">$0.00</span>
+                </div>
+            </div>
+
+            <button type="button" class="reset-btn" onclick="resetForm()">Reset</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
