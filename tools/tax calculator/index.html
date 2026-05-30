@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Australian tax calculator for annual income, ABN income and deductions. Estimate refund or additional tax owing." />
+  <title>Australian Tax Calculator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="brand">
+      <p class="brand__title">Australian Tax Calculator</p>
+      <p class="brand__subtitle">Estimate your refund or additional tax owing for the year</p>
+    </header>
+
+    <section class="card">
+      <form id="tax-form" novalidate>
+        <div class="field">
+          <label for="annual-income">Total annual income</label>
+          <input id="annual-income" name="annual-income" type="number" min="0" step="0.01" placeholder="Enter total income" inputmode="decimal" required />
+          <small>Include wages, salary and other assessable income.</small>
+        </div>
+
+        <div class="field">
+          <label for="tax-withheld">Total tax withheld by employer</label>
+          <input id="tax-withheld" name="tax-withheld" type="number" min="0" step="0.01" placeholder="Enter tax withheld" inputmode="decimal" required />
+          <small>Enter the total amount your employer withheld for the year.</small>
+        </div>
+
+        <div class="field">
+          <label>Do you have an ABN?</label>
+          <div class="radio-row">
+            <label><input id="abn-yes" name="abn" type="radio" value="yes" /> Yes</label>
+            <label><input id="abn-no" name="abn" type="radio" value="no" checked /> No</label>
+          </div>
+        </div>
+
+        <div id="abn-section" class="field hidden">
+          <label for="abn-income">ABN income</label>
+          <input id="abn-income" name="abn-income" type="number" min="0" step="0.01" placeholder="Enter ABN income" inputmode="decimal" />
+          <small>This is income earned through your ABN that should be included in your taxable income.</small>
+        </div>
+
+        <div class="field">
+          <label for="deductibles">Total deductible expenses</label>
+          <input id="deductibles" name="deductibles" type="number" min="0" step="0.01" placeholder="Enter total deductions" inputmode="decimal" />
+          <small>Include fuel, work expenses, tools, travel and other valid deductions.</small>
+        </div>
+
+        <button type="submit">Calculate tax estimate</button>
+      </form>
+
+      <section id="result-panel" class="result-panel hidden">
+        <h2>Estimated outcome</h2>
+        <p id="result-message">Your result will appear here.</p>
+        <p class="result-amount-label">Amount</p>
+        <p id="result-amount" class="result-amount">$0.00</p>
+        <span class="status break-even">Break-even</span>
+        <div id="result-details" class="note"></div>
+        <p class="note">This calculator uses current Australian resident tax brackets and is an estimate only. It does not replace official ATO advice.</p>
+      </section>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
