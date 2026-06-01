@@ -360,7 +360,16 @@ textarea {
 .input-container input {
   flex: 1;
 }
-
+.radio-input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--accent);
+  cursor: pointer;
+ margin:auto;
+}
+.deductible-label {
+  margin-top: 1rem;
+}
 .stats {
   margin-top: 1.5rem;
   padding: 1.25rem 1.4rem;
@@ -713,4 +722,24 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid rgba(86, 97, 210, 0.12);
+  box-shadow: 0 -10px 30px rgba(15, 32, 88, 0.08);
+}
+.fas.fa-envelope,
+.fab.fa-github,
+.fab.fa-linkedin {
+  font-size: 1.75rem;
+  color: var(--muted);
+  transition: color var(--transition);
+  margin-left: 0.75rem;
+}
+.fas.fa-envelope:hover,
+.fab.fa-github:hover,
+.fab.fa-linkedin:hover {
+  color: var(--accent);
 }
