@@ -187,8 +187,9 @@ button {
 .tools-grid {
   display: grid;
   gap: 1.75rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(4, minmax(10rem, 0.5fr));
   margin-top: 2rem;
+  margin-inline: 1.2rem;
 }
 
 .project-card,
@@ -201,6 +202,13 @@ button {
   padding: 2rem;
   transition: transform var(--transition), border-color var(--transition);
 }
+.project-card{
+display: flex;
+flex-direction:column;
+ justify-content:baseline;
+}
+
+
 
 .project-card:hover,
 .tool-card:hover,
