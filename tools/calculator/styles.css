@@ -587,7 +587,7 @@ textarea {
 
 #calculator {
   width: min(420px, 100%);
-  margin: 2rem auto 0;
+  margin: 0.5rem auto 0.5rem;
   padding: 1.4rem;
   background: rgba(255, 255, 255, 0.95);
   border-radius: 30px;
@@ -713,4 +713,32 @@ textarea {
     opacity: 1;
     transform: translateY(0);
   }
+}
+.footer {
+  text-align: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.92);
+  border-top: 1px solid rgba(86, 97, 210, 0.12);
+  box-shadow: 0 -10px 30px rgba(15, 32, 88, 0.08);
+}
+.fas.fa-envelope,
+.fab.fa-github,
+.fab.fa-linkedin {
+  font-size: 1.75rem;
+  color: var(--muted);
+  transition: color var(--transition);
+  margin-left: 0.75rem;
+}
+.fas.fa-envelope:hover,
+.fab.fa-github:hover,
+.fab.fa-linkedin:hover {
+  color: var(--accent);
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  color: var(--accent-dark);
+  text-align: center;
+  letter-spacing: 0.08em;
+  margin-bottom: auto;
 }
